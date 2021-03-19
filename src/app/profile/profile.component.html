@@ -1,0 +1,89 @@
+<mat-card>
+    <mat-toolbar>Create your Profile</mat-toolbar>
+
+    <form #profile="ngForm" (ngSubmit)="getValues(profile)">
+        <mat-form-field>
+            <mat-select placeholder="Designation"
+            name="Designation"
+            ngModel
+            >
+                <mat-option value="Developer">Developer</mat-option>
+                <mat-option value="Junior Developer">Junior Developer</mat-option> 
+                <mat-option value="Senior Developer">Senior Developer</mat-option> 
+                <mat-option value="Manager">Manager</mat-option>
+                <mat-option value="Data Scientist">Data Scientist</mat-option>     
+            </mat-select>
+        </mat-form-field>
+        <br><br>
+
+        <mat-form-field>
+            <input
+            type="text"
+            placeholder="Company"
+            matInput
+            name="Company"
+            ngModel
+            >
+        </mat-form-field>
+
+        <br><br>
+
+        <mat-form-field>
+            <input
+            type="text"
+            placeholder="Website"
+            matInput
+            name="Website"
+            ngModel
+            >
+        </mat-form-field>
+    
+        <br><br>
+
+        <mat-form-field>
+            <mat-select placeholder="Location"
+            name="location"
+            ngModel>
+                <mat-option value="Chandigarh">Chandigarh</mat-option>
+                <mat-option value="Phagwara">Phagwara</mat-option> 
+                <mat-option value="Mohali">Mohali</mat-option> 
+                <mat-option value="Ludhiana">Ludhiana</mat-option>
+                <mat-option value="Jalandhar">Jalandhar</mat-option>     
+            </mat-select>
+            </mat-form-field>
+
+            <br><br>
+
+            <mat-form-field>
+                <input
+                type="text"
+                placeholder="Skills"
+                matInput
+                name="Skills"
+                ngModel
+                >
+            </mat-form-field>
+
+            <br><br>
+
+            <mat-form-field>
+                <input
+                type="text"
+                placeholder="Github Username"
+                matInput
+                name="Gitname"
+                ngModel
+                >
+            </mat-form-field>
+
+            <br><br>
+
+            <textarea matInput ngModel placeholder="A short bio of yourself"></textarea>
+
+            <br><br>
+
+            <button type="submit" mat-raised-button color="accent">Submit</button>
+
+    </form>
+
+</mat-card>>

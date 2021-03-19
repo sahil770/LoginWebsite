@@ -1,0 +1,76 @@
+<mat-card>
+    <mat-toolbar>
+        Add your Experience
+    </mat-toolbar>
+    
+    <form #experience="ngForm" (ngSubmit)="getValues(experience)">
+        <mat-form-field>
+            <input
+            type="text"
+            placeholder="Job Title"
+            matInput
+            ngModel
+            name="institute"
+            >
+        </mat-form-field>
+
+        <br><br>
+
+        <mat-form-field>
+            <input
+            type="text"
+            placeholder="Company"
+            matInput
+            ngModel
+            name="Degree"
+            >
+        </mat-form-field>
+
+        <br><br>
+
+        <mat-form-field>
+            <input
+            type="text"
+            placeholder="Field of Study"
+            matInput
+            ngModel
+            name="Location"
+            > 
+        </mat-form-field>
+        <br><br>
+        <mat-form-field appearance="fill">
+            <mat-label>From date</mat-label>
+            <input matInput [matDatepicker]="picker" name="FromDate" ngModel>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+          
+        <mat-checkbox
+        name="terms"
+        ngModel
+        >
+            Current Job
+        </mat-checkbox>
+        
+        <br><br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>To date</mat-label>
+            <input matInput [matDatepicker]="picker2" name="toDate" ngModel>
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+    
+        <br><br>
+    
+       
+        <textarea placeholder="Job Description" name="description" ngModel matInput></textarea>
+        
+    
+        <br><br>
+    
+        <button type="submit" mat-raised-button color="accent">Submit</button>
+    
+    </form>
+
+</mat-card>
